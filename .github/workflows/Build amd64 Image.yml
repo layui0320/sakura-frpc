@@ -1,10 +1,9 @@
 name: Build Image
 
-
 on:
   push:
     branches:
-      - 'master'
+      - 'arm32v7'
     paths-ignore:
       - "README.md"
 
