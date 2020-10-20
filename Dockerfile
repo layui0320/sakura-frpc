@@ -4,7 +4,6 @@ LABEL maintainer="layui <58420846@qq.com>"
 
 ENV FRP_VERSION 0.28.2
 
-COPY qemu-aarch64-static /usr/bin
 
 RUN cd /root \
     &&  wget --no-check-certificate -c https://github.com/ZeroDream-CN/SakuraFrp/releases/download/v${FRP_VERSION}/frp_${FRP_VERSION}_linux_arm64.tar.gz \
