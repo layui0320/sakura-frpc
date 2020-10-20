@@ -1,14 +1,14 @@
 FROM amd64/alpine:3.10
 
-LABEL maintainer="layui0320"
+LABEL maintainer="layui <58420846@qq.com>"
 
 ENV FRP_VERSION 0.28.2
 
 RUN cd /root \
-    &&  wget --no-check-certificate -c  https://github.com/ZeroDream-CN/SakuraFrp/releases/download/v${FRP_VERSION}/frp_${FRP_VERSION}_linux_amd64.tar.gz \
+    &&  wget --no-check-certificate -c https://github.com/ZeroDream-CN/SakuraFrp/releases/download/v${FRP_VERSION}/frp_${FRP_VERSION}_linux_amd64.tar.gz \
     &&  tar zxvf frp_${FRP_VERSION}_linux_amd64.tar.gz  \
     &&  cd frp_${FRP_VERSION}_linux_amd64/ \
-    &&  cp frps /usr/bin/ \
+    &&  cp frpc /usr/bin/ \
     &&  mkdir -p /etc/frp \
     &&  cp frpc.ini /etc/frp \
     &&  cd /root \
