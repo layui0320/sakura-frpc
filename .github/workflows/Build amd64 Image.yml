@@ -29,8 +29,8 @@ jobs:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         run: |
           docker buildx build \
-          --platform=linux/amd64 \
+          --platform=linux/arm/v7 \
           --output "type=image,push=true" \
-          --file ./test/Dockerfile ./test \
-          --tag layui0320/arm64-sakura-frps:latest
+          --file ./Dockerfile . \
+          --tag layui0320/arm-sakura-frpc:latest
 
